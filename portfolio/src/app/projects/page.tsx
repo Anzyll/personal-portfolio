@@ -27,8 +27,8 @@ export default function Page() {
               Passionate about building high-performance and scalable web
               applications. I thrive on solving complex problems, optimizing
               performance, and creating intuitive user experiences. My expertise
-              lies in Next.js, TypeScript, and Cloud technologies, with a strong
-              focus on delivering quality solutions.
+              lies in React js and Springboot, and I enjoy working across the
+              stack to bring ideas to life.
             </p>
           </div>
         </section>

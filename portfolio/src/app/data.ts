@@ -92,7 +92,8 @@ export const DATA = {
       "Spring Boot",
       "JSP",
     ],
-    Database: ["PostgreSQL"],
+    Database: ["PostgreSQL", "Firebase"],
     "Build & Tools": ["Maven", "Git", "GitHub"],
+    "Cloud & Deployment": ["Vercel", "Render"],
   },
 };

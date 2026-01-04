@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 
 interface IProjectData {
   LIVE_PREVIEW?: string;
@@ -66,16 +66,6 @@ export function Projects({ data }: { data: Record<string, IProjectData> }) {
                   ))}
                 </ul>
 
-                {value.IMAGE && (
-                  <div className="mt-4 pl-3 w-full h-64 relative rounded-md overflow-hidden border border-muted">
-                    <Image
-                      src={value.IMAGE}
-                      alt={`${key} preview`}
-                      fill
-                      className="object-cover object-top"
-                    />
-                  </div>
-                )}
               </div>
             </li>
           ))}
