@@ -73,8 +73,8 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
 
-        {/* <Analytics /> */}
-        {/* <SpeedInsights /> */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

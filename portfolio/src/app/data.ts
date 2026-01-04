@@ -1,14 +1,6 @@
 import { StaticImageData } from "next/image";
 
-// import {
-//   OrmsOdmsImage,
-//   TsGenericsImage,
-//   TsReactImage,
-//   UtilityTypesImage,
-// } from "@/assets/blogs";
 import {
-  SkygazeImage,
-  TodoImage,
   TrevoraHeroImage,
   CafePosImage,
 } from "@/assets/projects";

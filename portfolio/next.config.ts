@@ -18,11 +18,7 @@ const nextConfig: NextConfig = {
       }
     ]
   },
-  devIndicators: {
-    appIsrStatus: false,
-    buildActivity: false,
-    staticPageGenerationTimeout: 100,
-  },
+  staticPageGenerationTimeout: 100,
 };
 
 export default nextConfig;
