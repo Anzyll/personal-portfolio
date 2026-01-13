@@ -13,14 +13,14 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammed Anzil M",
+  title: "Muhammed Anzil M | software engineer",
   description:
     "Full-Stack developer specializing in React.js, Springboot, and Scalable Web Applications.",
   openGraph: {
     title: "Muhammed Anzil M | Full-Stack Developer",
     description:
       "Full-Stack developer specializing in React.js, Springboot, and Scalable Web Applications.",
-    url: "https://example.com/", // Placeholder
+    url: "https://muhammedanzilm.vercel.app/", // Placeholder
     type: "website",
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   authors: [
-    { name: "Muhammed Anzil M", url: "https://example.com/" },
+    { name: "Muhammed Anzil M", "url": "https://muhammedanzilm.vercel.app/" },
   ],
   keywords: [
     "Muhammed Anzil M",
@@ -59,6 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable}`} suppressHydrationWarning>
+   
       <body
         className={`${outfit.className} w-screen min-h-screen m-0 p-0 overflow-x-hidden dark:bg-[#0b0a09]`}
       >
