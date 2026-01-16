@@ -86,11 +86,8 @@ export const DATA = {
     Languages: ["Java", "JavaScript","HTML", "CSS"],
     Frontend: ["React.js", "Redux Toolkit", "Tailwind CSS", "Bootstrap"],
     Backend: [
-      "Java Servlets",
-      "JDBC",
       "Spring Framework",
       "Spring Boot",
-      "JSP",
     ],
     Database: ["PostgreSQL", "Firebase"],
     "Build & Tools": ["Maven", "Git", "GitHub","JUnit","Mockito"],
