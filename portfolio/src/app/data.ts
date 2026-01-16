@@ -84,7 +84,7 @@ export const DATA = {
 
   SKILLS: {
     Languages: ["Java", "JavaScript","HTML", "CSS"],
-    Frontend: ["React.js", "Redux Toolkit", "Tailwind CSS", "Bootstrap"],
+    Frontend: ["React.js", "Tailwind CSS", "Bootstrap"],
     Backend: [
       "Spring Framework",
       "Spring Boot",
