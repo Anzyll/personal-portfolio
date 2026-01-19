@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+   icons: {
+    icon: "/favicon.ico",
+  },
   authors: [
     { name: "Muhammed Anzil M", "url": "https://muhammedanzilm.vercel.app/" },
   ],
