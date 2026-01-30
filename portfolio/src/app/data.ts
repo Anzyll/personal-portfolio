@@ -88,6 +88,8 @@ export const DATA = {
     Backend: [
       "Spring Framework",
       "Spring Boot",
+      "Spring Data Jpa",
+      "Hibernate"
     ],
     Database: ["PostgreSQL", "Firebase"],
     "Build & Tools": ["Maven", "Git", "GitHub","JUnit","Mockito"],
