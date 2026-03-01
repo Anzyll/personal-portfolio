@@ -3,6 +3,7 @@ import { StaticImageData } from "next/image";
 import {
   TrevoraHeroImage,
   CafePosImage,
+  EcommerceBackendImage
 } from "@/assets/projects";
 
 export interface IProjectData {
@@ -28,19 +29,44 @@ export const DATA = {
     AGE: "22",
     HEADLINE:
       "Passionate about building high-performance and scalable web applications.",
-    RESUME: "https://drive.google.com/file/d/1kevo_q7ram_gXgDqD6hQKIJ00ddkU1ej/view?usp=sharing", // Placeholder as no resume link was provided
+    RESUME: "https://drive.google.com/file/d/13h7dI6UJIONUlawpRcvWnOUmmc764GhS/view?usp=sharing", // Placeholder as no resume link was provided
     EMAIL: "mailto:anzil2003m@gmail.com", // Placeholder
     GITHUB: "https://github.com/Anzyll", // Placeholder
     LINKEDIN: "https://www.linkedin.com/in/muhammedanzilm/",
     INTRO:
-      "Hey! I'm a full-stack developer who loves building efficient, scalable, and intuitive applications. I thrive on solving complex problems, optimizing performance, and creating seamless user experiences.",
-    EXPERTISE:
-      "My expertise lies in React js and Springboot, and I enjoy working across the stack to bring ideas to life.",
+      "Backend Engineer with hands-on experience building production-oriented backend systems using Java, Spring Boot, RESTful APIs, and PostgreSQL. Architected secure authentication flows, transactional order workflows, and clean service-layer designs with a strong emphasis on correctness and scalability"
+
+    , EXPERTISE:
+      " Complemented by practical frontend experience using React, building user-facing and admin interfaces that integrate tightly with backend APIs. Experienced with Dockerized deployments, AWS infrastructure, CI/CD automation, and multi-level backend testing. Focused on maintainable system design, performance, and real-world engineering trade-offs.",
   },
 
-  EXPERIENCE: {},
 
   PROJECTS: {
+    "E-Commerce Backend System": {
+      GITHUB: "https://github.com/Anzyll/ecommerce-backend-api", // Using base URL as specific link wasn't provided, but I'll search if needed
+      DESCRIPTION: [
+        "Architected and developed a modular e-commerce backend following a clean layered architecture (Controller, Service/Orchestrator, Repository).",
+        "Built 20+ REST endpoints covering user, product, cart, wishlist, and order workflows.",
+        "Enforced secure role-based access control (User/Admin) using Spring Security and JWT.",
+        "Engineered transactional order placement and cancellation flows using @Transactional, ensuring inventory consistency and idempotent operations.",
+        "Established layered testing across unit, integration, container-based (Testcontainers), and end-to-end levels.",
+        "Deployed a containerized backend on AWS EC2 backed by managed PostgreSQL on AWS RDS.",
+        "Built a CI/CD pipeline automating build, test, Docker image creation, and deployment.",
+      ],
+      TECH_STACK: [
+        "Java 17",
+        "Spring Boot",
+        "PostgreSQL",
+        "Spring Security",
+        "Spring Data Jpa",
+        "Docker",
+        "AWS EC2",
+        "AWS RDS",
+        "CI/CD",
+        "JaCoCo",
+      ],
+      IMAGE: EcommerceBackendImage,
+    },
     "Trevora": {
       LIVE_PREVIEW: "https://trevora-3rjo.vercel.app/",
       GITHUB: "https://github.com/Anzyll/Trevora",
@@ -83,16 +109,36 @@ export const DATA = {
   BLOGS: {},
 
   SKILLS: {
-    Languages: ["Java", "JavaScript","HTML", "CSS"],
-    Frontend: ["React.js", "Tailwind CSS", "Bootstrap"],
     Backend: [
-      "Spring Framework",
+      "Java",
       "Spring Boot",
-      "Spring Data Jpa",
-      "Hibernate"
+      "Spring Security",
+      "Spring Data JPA",
+      "Hibernate",
     ],
-    Database: ["PostgreSQL", "Firebase"],
-    "Build & Tools": ["Maven", "Git", "GitHub","JUnit","Mockito"],
-    "Cloud & Deployment": ["Vercel", "Render"],
+    Databases: ["PostgreSQL", "Relational Data Modeling", "Flyway"],
+    "APIs & Security": [
+      "RESTful APIs",
+      "JWT",
+      "Role-Based Access Control (RBAC)",
+      "Global Exception Handling",
+    ],
+    Testing: [
+      "JUnit 5",
+      "Mockito",
+      "Spring Boot Test",
+      "@DataJpaTest",
+      "Unit, Integration, Container (Testcontainers), E2E Testing",
+      "JaCoCo",
+    ],
+    "DevOps & Cloud": [
+      "Docker",
+      "AWS EC2",
+      "AWS RDS",
+      "CI/CD",
+      "GitHub Actions",
+    ],
+    Tools: ["Git", "GitHub", "Postman", "Swagger/OpenAPI"],
+    "Frontend (Basic)": ["HTML", "CSS", "JavaScript", "React"],
   },
 };
