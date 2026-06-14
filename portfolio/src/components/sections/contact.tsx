@@ -2,7 +2,14 @@ import { FileText, Github, Linkedin, Mail } from "lucide-react";
 
 import { MovingElement } from "../navbar";
 
-export function Contact({ data }: { data: Record<string, string> }) {
+interface IContactData {
+  RESUME: string;
+  EMAIL: string;
+  GITHUB: string;
+  LINKEDIN: string;
+}
+
+export function Contact({ data }: { data: IContactData }) {
   const handleChange = (url: string) => {
     window.open(url, "_blank");
   };
@@ -13,9 +20,8 @@ export function Contact({ data }: { data: Record<string, string> }) {
         <div className="space-y-4">
           <h2 className="font-bold text-3xl">Let&apos;s work together.</h2>
           <p className="mx-auto max-w-2xl text-muted-foreground text-base">
-            I&apos;m always interested in new opportunities and exciting
-            projects. Whether you have a project in mind or just want to chat
-            about tech, I&apos;d love to hear from you.
+            I&apos;m interested in backend engineering, distributed systems,
+            cloud infrastructure, and production-ready API development.
           </p>
         </div>
 
@@ -60,7 +66,7 @@ export function Contact({ data }: { data: Record<string, string> }) {
 
         <div className="cursor-target">
           <p className="text-gray-400 text-sm">
-            Currently available for freelance work and full-time opportunities
+            Open to backend and distributed systems engineering roles
           </p>
           <p className="mt-2 text-gray-500 text-xs">
             Response time: Usually within 24 hours

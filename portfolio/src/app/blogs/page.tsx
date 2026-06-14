@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, BookOpen } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -22,11 +22,11 @@ export default function Page() {
           <h1 className="font-medium text-primary/90 text-base">
             technical blogs.
           </h1>
-          <div className="max-w-4xl text-muted-foreground text-sm text-justify leading-relaxed">
+          <div className="max-w-4xl text-muted-foreground text-sm leading-relaxed">
             <p className="mt-2 mb-4">
-              I write about web development, TypeScript, and best practices I
-              discover while building apps. Here are some of my technical posts
-              — feel free to read more on the original links.
+              Notes on backend architecture, concurrency, messaging,
+              infrastructure, and the engineering trade-offs behind
+              production-ready systems.
             </p>
           </div>
         </section>
@@ -40,13 +40,19 @@ export default function Page() {
                 <div className="items-start gap-12 grid lg:grid-cols-2 cursor-target">
                   <div className={`${isEven ? "lg:order-1" : "lg:order-2"}`}>
                     <div className="relative rounded-lg overflow-hidden">
-                      <Image
-                        src={value.IMAGE || "/placeholder.svg"}
-                        alt={key}
-                        width={600}
-                        height={400}
-                        className="w-full h-80 object-cover"
-                      />
+                      {value.IMAGE ? (
+                        <Image
+                          src={value.IMAGE}
+                          alt={key}
+                          width={600}
+                          height={400}
+                          className="w-full h-80 object-cover"
+                        />
+                      ) : (
+                        <div className="flex justify-center items-center bg-muted w-full h-80">
+                          <BookOpen className="w-10 h-10 text-muted-foreground" />
+                        </div>
+                      )}
                       <span className="top-4 lg:right-4 max-lg:left-4 absolute bg-secondary px-3 py-1.5 rounded text-xs">
                         {value.DATE}
                       </span>
@@ -74,7 +80,7 @@ export default function Page() {
                       </p>
                     </div>
 
-                    <p className="mt-1 text-muted-foreground text-sm text-justify line-clamp-3">
+                    <p className="mt-1 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                       {value.DESCRIPTION}
                     </p>
                   </div>

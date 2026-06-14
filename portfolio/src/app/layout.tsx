@@ -13,46 +13,48 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://muhammedanzilm.vercel.app"),
   title: "Muhammed Anzil M | software engineer",
   description:
-    "Full-Stack developer specializing in React.js, Springboot, and Scalable Web Applications.",
+    "Backend and distributed systems engineer building scalable APIs, event-driven architectures, and cloud-native applications.",
   openGraph: {
-    title: "Muhammed Anzil M | Full-Stack Developer",
+    title: "Muhammed Anzil M | Backend & Distributed Systems Engineer",
     description:
-      "Full-Stack developer specializing in React.js, Springboot, and Scalable Web Applications.",
-    url: "https://muhammedanzilm.vercel.app/", // Placeholder
+      "Backend and distributed systems engineer building scalable APIs, event-driven architectures, and cloud-native applications.",
+    url: "https://muhammedanzilm.vercel.app/",
     type: "website",
     images: [
       {
-        url: "/opengraph-image.png", // Assuming local or updated image
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Muhammed Anzil M | Full-Stack Developer",
+        alt: "Muhammed Anzil M | Backend & Distributed Systems Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
   },
-   icons: {
+  icons: {
     icon: "/favicon.ico",
   },
   authors: [
-    { name: "Muhammed Anzil M", "url": "https://muhammedanzilm.vercel.app/" },
+    { name: "Muhammed Anzil M", url: "https://muhammedanzilm.vercel.app/" },
   ],
   keywords: [
     "Muhammed Anzil M",
-    "Software Developer",
-    "Full-Stack Developer",
-    "React",
-    "Springboot",
+    "Backend Engineer",
+    "Distributed Systems Engineer",
+    "Spring Boot",
     "Java",
+    "Kafka",
+    "Redis",
+    "Terraform",
+    "AWS",
     "PostgreSQL",
-    "Web Development",
   ],
   creator: "Muhammed Anzil M",
   publisher: "Muhammed Anzil M",
-
 };
 
 export default function RootLayout({
@@ -62,7 +64,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable}`} suppressHydrationWarning>
-   
       <body
         className={`${outfit.className} w-screen min-h-screen m-0 p-0 overflow-x-hidden dark:bg-[#0b0a09]`}
       >
