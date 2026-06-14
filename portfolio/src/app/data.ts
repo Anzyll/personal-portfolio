@@ -2,9 +2,19 @@ import { StaticImageData } from "next/image";
 
 import {
   TrevoraHeroImage,
+  BookMyVenueArchitectureImage,
   CafePosImage,
+  EcommerceCicdImage,
   EcommerceBackendImage,
+  FlashSaleArchitectureImage,
+  FlashSaleDashboardImage,
+  FlashSaleLoadTestImage,
 } from "@/assets/projects";
+
+export interface IProjectImage {
+  LABEL: string;
+  IMAGE: StaticImageData;
+}
 
 export interface IProjectData {
   LIVE_PREVIEW?: string;
@@ -14,6 +24,7 @@ export interface IProjectData {
   NOTE?: string;
   TECH_STACK: string[];
   IMAGE: StaticImageData;
+  IMAGES?: IProjectImage[];
   FEATURED?: boolean;
   PRIMARY?: boolean;
 }
@@ -34,7 +45,7 @@ export const DATA = {
     HEADLINE:
       "Building scalable backend systems, event-driven architectures, and cloud-native applications.",
     RESUME:
-      "https://drive.google.com/file/d/13h7dI6UJIONUlawpRcvWnOUmmc764GhS/view?usp=sharing",
+      "https://drive.google.com/file/d/1FjJB6KSZ80CnimtkQHBX06Oz5BHKh3wx/view?usp=sharing",
     EMAIL: "mailto:anzil2003m@gmail.com",
     GITHUB: "https://github.com/Anzyll",
     LINKEDIN: "https://www.linkedin.com/in/muhammedanzilm/",
@@ -63,7 +74,7 @@ export const DATA = {
 
   PROJECTS: {
     "High-Concurrency Flash Sale System": {
-      GITHUB: "https://github.com/Anzyll/flash-sale-system",
+      GITHUB: "https://github.com/Anzyll/flash-sale-order-system",
       DESCRIPTION: [
         "Designed a high-concurrency backend for flash-sale ordering with atomic Redis stock reservation, asynchronous Kafka processing, and infrastructure provisioned on AWS with Terraform.",
       ],
@@ -85,12 +96,26 @@ export const DATA = {
         "AWS",
         "k6",
       ],
-      IMAGE: EcommerceBackendImage,
+      IMAGE: FlashSaleArchitectureImage,
+      IMAGES: [
+        {
+          LABEL: "Architecture Diagram",
+          IMAGE: FlashSaleArchitectureImage,
+        },
+        {
+          LABEL: "Load Test Result",
+          IMAGE: FlashSaleLoadTestImage,
+        },
+        {
+          LABEL: "Monitoring Dashboard",
+          IMAGE: FlashSaleDashboardImage,
+        },
+      ],
       FEATURED: true,
       PRIMARY: true,
     },
     BookMyVenue: {
-      GITHUB: "https://github.com/Anzyll/bookmyvenue",
+      GITHUB: "https://github.com/BookMyVenue-Team/BookMyVenue",
       DESCRIPTION: [
         "Collaborative venue-booking backend featuring dynamic slot availability calculation, booking lifecycle management, and double-booking prevention using transactional consistency.",
         "Implemented venue template management, dynamic availability computation, concurrent booking validation, and multithreaded testing to ensure booking correctness under concurrent requests.",
@@ -104,7 +129,13 @@ export const DATA = {
         "Docker",
         "JUnit",
       ],
-      IMAGE: EcommerceBackendImage,
+      IMAGE: BookMyVenueArchitectureImage,
+      IMAGES: [
+        {
+          LABEL: "BookMyVenue Architecture",
+          IMAGE: BookMyVenueArchitectureImage,
+        },
+      ],
       FEATURED: true,
     },
     "E-Commerce Backend API": {
@@ -126,6 +157,16 @@ export const DATA = {
         "JaCoCo",
       ],
       IMAGE: EcommerceBackendImage,
+      IMAGES: [
+        {
+          LABEL: "Swagger API Documentation",
+          IMAGE: EcommerceBackendImage,
+        },
+        {
+          LABEL: "CI/CD Pipeline",
+          IMAGE: EcommerceCicdImage,
+        },
+      ],
       FEATURED: true,
     },
     Trevora: {
@@ -167,14 +208,14 @@ export const DATA = {
       {
         DATE: "Medium",
         TIME: "6",
-        LINK: "https://medium.com/@anzil2003m",
+        LINK: "https://medium.com/@anzil2003m/how-i-built-a-flash-sale-backend-that-survived-10-000-concurrent-purchase-requests-f4c65b2c8531",
         DESCRIPTION:
           "Lessons learned building a high-concurrency flash sale system with Redis, Kafka, load testing, and fault-tolerant processing.",
       },
     "The Git & GitHub Guide I Wish I Had as a Beginner": {
       DATE: "Medium",
       TIME: "5",
-      LINK: "https://medium.com/@anzil2003m",
+      LINK: "https://medium.com/@anzil2003m/the-git-github-guide-i-wish-i-had-as-a-beginner-38546d5400ea",
       DESCRIPTION:
         "A practical guide covering Git fundamentals, workflows, branching, collaboration, and GitHub best practices.",
     },

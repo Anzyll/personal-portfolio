@@ -22,20 +22,39 @@ export default function Page() {
   const renderProjects = (projects: [string, IProjectData][]) =>
     projects.map(([key, value], index) => {
       const isEven = index % 2 === 0;
+      const projectImages = value.IMAGES ?? [
+        {
+          LABEL: key,
+          IMAGE: value.IMAGE,
+        },
+      ];
 
       return (
         <React.Fragment key={key}>
           <div className="items-start gap-12 grid lg:grid-cols-2 cursor-target">
             <div className={`${isEven ? "lg:order-1" : "lg:order-2"}`}>
-              <div className="relative rounded-lg overflow-hidden">
-                <Image
-                  src={value.IMAGE || "/placeholder.svg"}
-                  alt={key}
-                  width={600}
-                  height={400}
-                  className="w-full h-80 object-cover"
-                />
-              </div>
+              <ul
+                className="flex gap-3 pb-2 overflow-x-auto snap-x snap-mandatory"
+                aria-label={`${key} visuals`}
+              >
+                {projectImages.map((projectImage) => (
+                  <li
+                    key={projectImage.LABEL}
+                    className="relative rounded-lg min-w-full overflow-hidden snap-start"
+                  >
+                    <Image
+                      src={projectImage.IMAGE}
+                      alt={`${key} - ${projectImage.LABEL}`}
+                      width={600}
+                      height={400}
+                      className="w-full h-80 object-cover"
+                    />
+                    <span className="top-3 left-3 absolute bg-background/90 px-2 py-1 border rounded text-muted-foreground text-xs">
+                      {projectImage.LABEL}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div
