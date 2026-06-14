@@ -77,7 +77,7 @@ export function Projects({ data }: { data: Record<string, IProjectData> }) {
 
                   {value.DESCRIPTION.length > 1 && (
                     <ul className="space-y-1 mt-1 pl-3 text-muted-foreground text-sm leading-relaxed list-disc">
-                      {value.DESCRIPTION.map((desc, index) => (
+                      {value.DESCRIPTION.slice(1).map((desc, index) => (
                         <li key={index}>
                           <span>{desc}</span>
                         </li>

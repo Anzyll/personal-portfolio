@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { BookOpen, Github, Linkedin, Mail } from "lucide-react";
 
 import { MovingElement } from "../navbar";
 
@@ -11,6 +11,7 @@ interface IHeaderData {
   EMAIL: string;
   GITHUB: string;
   LINKEDIN: string;
+  MEDIUM: string;
   TECH_PILLS: string[];
   IMPACTS: string[];
   ABOUT: string[];
@@ -83,6 +84,12 @@ export function Header({ data }: { data: IHeaderData }) {
               ariaLabel="Linkedin"
             >
               <Linkedin />
+            </MovingElement>
+            <MovingElement
+              change={() => handleChange(data.MEDIUM)}
+              ariaLabel="Medium"
+            >
+              <BookOpen />
             </MovingElement>
           </div>
         </div>

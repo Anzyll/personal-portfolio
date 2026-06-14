@@ -46,7 +46,14 @@ export default function Page() {
               } ${isEven ? "lg:order-2" : "lg:order-1"}`}
             >
               <div>
-                <h2 className="mb-1 font-medium text-2xl">{key}</h2>
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                  <h2 className="font-medium text-2xl">{key}</h2>
+                  {value.NOTE && (
+                    <span className="bg-muted px-2 py-1 rounded text-muted-foreground text-xs">
+                      {value.NOTE}
+                    </span>
+                  )}
+                </div>
 
                 <p className="flex items-center gap-1 text-sm">
                   {value.LIVE_PREVIEW && (

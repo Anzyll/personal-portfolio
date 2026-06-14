@@ -38,6 +38,7 @@ export const DATA = {
     EMAIL: "mailto:anzil2003m@gmail.com",
     GITHUB: "https://github.com/Anzyll",
     LINKEDIN: "https://www.linkedin.com/in/muhammedanzilm/",
+    MEDIUM: "https://medium.com/@anzil2003m",
     TECH_PILLS: [
       "Java",
       "Spring Boot",
@@ -48,10 +49,10 @@ export const DATA = {
       "AWS",
     ],
     IMPACTS: [
-      "8,000+ Concurrent Users Tested",
+      "8,000+ Concurrent Users Simulated",
       "30+ REST APIs Built",
-      "Kafka Event Workflows",
-      "AWS Infrastructure Provisioned",
+      "Kafka Event-Driven Workflows",
+      "AWS Infrastructure via Terraform",
     ],
     ABOUT: [
       "Backend-focused Software Engineer specializing in distributed systems, cloud infrastructure, and production-ready backend development.",
@@ -91,24 +92,26 @@ export const DATA = {
     BookMyVenue: {
       GITHUB: "https://github.com/Anzyll/bookmyvenue",
       DESCRIPTION: [
-        "Built a venue-booking backend with authenticated user workflows, booking lifecycle management, role-based access control, and clean REST API boundaries.",
+        "Collaborative venue-booking backend featuring dynamic slot availability calculation, booking lifecycle management, and double-booking prevention using transactional consistency.",
+        "Implemented venue template management, dynamic availability computation, concurrent booking validation, and multithreaded testing to ensure booking correctness under concurrent requests.",
       ],
       TECH_STACK: [
-        "Java",
         "Spring Boot",
+        "PostgreSQL",
         "Spring Security",
         "JWT",
-        "PostgreSQL",
         "Hibernate",
         "Docker",
+        "JUnit",
       ],
       IMAGE: EcommerceBackendImage,
       FEATURED: true,
     },
-    "E-Commerce Backend System": {
+    "E-Commerce Backend API": {
       GITHUB: "https://github.com/Anzyll/ecommerce-backend-api",
       DESCRIPTION: [
-        "Developed a modular e-commerce backend with 20+ REST APIs, JWT-secured user/admin access, transactional order workflows, and container-based testing.",
+        "Production-oriented e-commerce backend featuring authentication, authorization, transactional order workflows, CI/CD automation, cloud deployment, and containerized testing.",
+        "Implemented JWT authentication, role-based access control, Flyway migrations, GitHub Actions pipelines, and Testcontainers-powered integration testing.",
       ],
       TECH_STACK: [
         "Java 17",
@@ -145,8 +148,10 @@ export const DATA = {
     "Cafe POS System": {
       GITHUB: "https://github.com/Anzyll/cafe-pos",
       DESCRIPTION: [
-        "A production-oriented Point of Sale (POS) system built for a real café to streamline order management, billing, and table operations.",
+        "Production-oriented Point of Sale system built for a real café to streamline billing, order management, and table operations.",
+        "Features role-based access for staff, live order synchronization, dynamic billing workflows, and responsive tablet-friendly interfaces.",
       ],
+      NOTE: "Freelance Project",
       TECH_STACK: [
         "React",
         "Tailwind CSS",
@@ -158,33 +163,20 @@ export const DATA = {
   },
 
   BLOGS: {
-    "Building a High-Concurrency Flash Sale System": {
-      DATE: "Medium",
-      TIME: "6",
-      LINK: "https://medium.com/@anzil2003m",
-      DESCRIPTION:
-        "A systems-oriented walkthrough of stock reservation, queue-backed order processing, and load testing for flash-sale workloads.",
-    },
-    "Redis Lua Scripting for Atomic Operations": {
-      DATE: "Medium",
-      TIME: "4",
-      LINK: "https://medium.com/@anzil2003m",
-      DESCRIPTION:
-        "Notes on using Redis Lua scripts to keep high-contention inventory operations atomic and predictable.",
-    },
-    "Kafka Retry and DLQ Patterns": {
+    "How I Built a Flash Sale Backend That Survived 10,000 Concurrent Purchase Requests":
+      {
+        DATE: "Medium",
+        TIME: "6",
+        LINK: "https://medium.com/@anzil2003m",
+        DESCRIPTION:
+          "Lessons learned building a high-concurrency flash sale system with Redis, Kafka, load testing, and fault-tolerant processing.",
+      },
+    "The Git & GitHub Guide I Wish I Had as a Beginner": {
       DATE: "Medium",
       TIME: "5",
       LINK: "https://medium.com/@anzil2003m",
       DESCRIPTION:
-        "A practical look at retry topics, dead-letter queues, and failure handling in event-driven Spring Boot systems.",
-    },
-    "Testing Spring Boot with Testcontainers": {
-      DATE: "Medium",
-      TIME: "5",
-      LINK: "https://medium.com/@anzil2003m",
-      DESCRIPTION:
-        "How container-backed integration tests improve confidence around persistence, messaging, and API behavior.",
+        "A practical guide covering Git fundamentals, workflows, branching, collaboration, and GitHub best practices.",
     },
   },
 
@@ -199,13 +191,13 @@ export const DATA = {
   },
 
   HIGHLIGHTS: [
-    "Redis Lua Scripting",
-    "Event-Driven Architecture",
-    "Kafka Retry & DLQ Processing",
+    "Atomic Stock Reservation (Redis Lua)",
+    "Kafka Retry & Dead-Letter Processing",
+    "Dynamic Availability Calculation",
     "Terraform Infrastructure as Code",
-    "OAuth2 / RBAC Security",
-    "Distributed System Design",
-    "Observability & Monitoring",
+    "OAuth2 & RBAC Security",
+    "Distributed Booking Consistency",
+    "Observability & Alerting",
   ],
 
   MEDIUM: "https://medium.com/@anzil2003m",

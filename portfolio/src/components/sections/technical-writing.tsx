@@ -44,13 +44,16 @@ export function TechnicalWriting({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 mt-2 text-muted-foreground hover:text-primary text-xs"
                 >
-                  {value.DATE} placeholder <ArrowUpRight size={14} />
+                  Read on {value.DATE} <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
           </li>
         ))}
       </ul>
+      <p className="mt-3 text-muted-foreground text-xs">
+        More articles coming soon.
+      </p>
     </section>
   );
 }

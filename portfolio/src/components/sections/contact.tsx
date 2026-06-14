@@ -1,4 +1,4 @@
-import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { BookOpen, FileText, Github, Linkedin, Mail } from "lucide-react";
 
 import { MovingElement } from "../navbar";
 
@@ -7,6 +7,7 @@ interface IContactData {
   EMAIL: string;
   GITHUB: string;
   LINKEDIN: string;
+  MEDIUM: string;
 }
 
 export function Contact({ data }: { data: IContactData }) {
@@ -60,6 +61,12 @@ export function Contact({ data }: { data: IContactData }) {
               ariaLabel="Email"
             >
               <Mail />
+            </MovingElement>
+            <MovingElement
+              change={() => handleChange(data.MEDIUM)}
+              ariaLabel="Medium"
+            >
+              <BookOpen />
             </MovingElement>
           </div>
         </div>
